@@ -33,6 +33,9 @@ const Chat = () => {
     const [showAuthMessage, setShowAuthMessage] = useState<boolean>(true);
     
     const getUserInfoList = async () => {
+        setShowAuthMessage(false);
+    }
+/*
         const userInfoList = await getUserInfo();
         if (userInfoList.length === 0 && window.location.hostname !== "127.0.0.1") {
             setShowAuthMessage(false);
@@ -40,7 +43,7 @@ const Chat = () => {
         else {
             setShowAuthMessage(false);
         }
-    }
+*/
 
     const makeApiRequest = async (question: string) => {
         lastQuestionRef.current = question;
